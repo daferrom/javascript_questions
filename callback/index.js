@@ -1,4 +1,10 @@
-// Un callback en JavaScript es una función que se pasa como argumento a otra función y se ejecuta después de que se completa alguna operación, permitiendo un comportamiento asíncrono o controlable. Los callbacks son fundamentales en JavaScript, especialmente cuando se trabaja con operaciones que toman tiempo, como solicitudes HTTP, temporizadores o eventos del DOM.
+//Callback is a function passed as an argument to another function, an it will run after the completion of other operation.
+// It allows a asynchronous behavior and and controllable 
+// theCallbacks are fundamental in JS, specially when involves operations that takes time like:
+// HTTP requests
+// timers
+// DOM events
+
 
 function saludo(nombre) {
     console.log(`Hola, ${nombre}`);
@@ -6,16 +12,17 @@ function saludo(nombre) {
   
   function procesarEntradaUsuario(callback) {
     const nombre = "Diego";
-    setTimeout(() => {
-        callback(nombre); // Llamamos a la función callback
-    }, 2000);
+      setTimeout(() => {
+          callback(nombre); // callback summon or call
+      }, 2000);
   }
   
   procesarEntradaUsuario(saludo); // Output: Hola, Diego
   
 
 //   Callback en solicitudes HTTP:
-// Un caso común de uso de callbacks es manejar el resultado de una solicitud HTTP. Por ejemplo, con XMLHttpRequest (antes de fetch y async/await):
+// Un caso común de uso de callbacks es manejar el resultado de una solicitud HTTP. 
+// Por ejemplo, con XMLHttpRequest (antes de fetch y async/await):
 
 function makeRequest(url, callback) {
     const request = new XMLHttpRequest();
@@ -42,7 +49,8 @@ function makeRequest(url, callback) {
   });
 
 //   Ventajas del uso de callbacks:
-// Flexibilidad: Permite que las funciones se vuelvan más reutilizables, ya que el comportamiento específico puede diferirse a la función callback.
+// Flexibilidad: Permite que las funciones se vuelvan más reutilizables, 
+// ya que el comportamiento específico puede diferirse a la función callback.
 // Manejo de tareas asíncronas: Permiten que el código siga ejecutándose mientras se espera una respuesta o una operación lenta, como una solicitud de red.
 
 
