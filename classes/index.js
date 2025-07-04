@@ -1,4 +1,5 @@
-// // Before ES6 version, using constructor functions
+// Before ES6 version, using constructor functions
+
 // function Student(name,rollNumber,grade,section){
 //     this.name = name;
 //     this.rollNumber = rollNumber;
@@ -6,14 +7,15 @@
 //     this.section = section;
 //   }
 
-//   // Way to add methods to a constructor function
+// Way to add methods to a constructor function
+
 //   Student.prototype.getDetails = function(){
 //     return 'Name: ${this.name}, Roll no: ${this.rollNumber}, Grade: ${this.grade}, Section:${this.section}';
 //   }
 
 //   let student1 = new Student("Vivek", 354, "6th", "A");
 //   student1.getDetails();
-//   // Returns Name: Vivek, Roll no:354, Grade: 6th, Section:A
+// Returns Name: Vivek, Roll no:354, Grade: 6th, Section:A
 
 // ES6 version classes
 class Student {

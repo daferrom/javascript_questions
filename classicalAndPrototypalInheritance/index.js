@@ -1,18 +1,25 @@
-// 1. Herencia Clásica (Classical Inheritance)
-// En la herencia clásica, que es común en lenguajes como Java, C++ o Python, la herencia se basa en clases.
+// 1. Classical Inheritance
+
+//  The classical inheritance is common in programming laguages like:
+//  Java, C++ o Python, The inheritance is class based
 
 // Una clase es una plantilla que define las propiedades y métodos de un objeto. Los objetos son instancias de estas clases, y las clases pueden heredar de otras clases.
 
-// Características:
+// A class is a template which defines properties and methods of an object
 
-// Se basa en la idea de clases y objetos.
-// Una clase hija hereda de una clase padre (superclase).
-// Los objetos son instancias de una clase.
-// Las clases definen un conjunto de atributos y métodos que luego son heredados.
+// the objects are Instances of this classes and this classes
+// The classes can inherit from other classes
 
+/* Main Features:
+  * Based on the idea of classes and objects
+  * A child class inherits from a parent class (superclass)
+  * The objects are instances of a class
+  * The classes defined a set of attributtes and methods which can be inherit.
+*/
 // Ejemplo en JavaScript con ES6 (herencia clásica usando class):
 
-// Clase Padre (superclase)
+
+// Parent Class (Super class)
 
 class Vehicle {
   constructor(type) {
@@ -20,27 +27,27 @@ class Vehicle {
   }
 
   move() {
-    console.log(`${this.type} está en movimiento`);
+    console.log(`${this.type} is moving`);
   }
 }
 
-// Clase Hija (subclase)
+// Child Class (subclass)
 
 class Car extends Vehicle {
   constructor(type, brand) {
-    super(type); // Llama al constructor de la clase padre
+    super(type); // Calls the constructor of the parent class
     this.brand = brand;
   }
 
   displayBrand() {
-    console.log(`Este coche es un ${this.brand}`);
+    console.log(`This car is a ${this.brand}`);
   }
 }
 
-// Crear instancia de la clase hija
-const myCar = new Car("Vehículo", "Toyota");
+// Create intance of the child class
+const myCar = new Car("Vehicle", "Toyota");
 
-// Llamada a métodos heredados y propios
+// Call inherited methods and own ones
 
-myCar.move(); // Vehículo está en movimiento (heredado de Vehicle)
-myCar.displayBrand(); // Este coche es un Toyota (propio de Car)
+myCar.move(); // Vehículo está en movimiento (heredado de Vehicle) // Vehicle is moving (method inherited from Vehicle)
+myCar.displayBrand(); // This car is a Toyota (own method of Car)

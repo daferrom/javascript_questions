@@ -1,30 +1,40 @@
-// 2. Herencia Prototipal (Prototypal Inheritance)
+// 2. Prototypal Inheritance)
+
 // En JavaScript, todo objeto tiene un prototipo del cual puede heredar propiedades y métodos. En lugar de depender de clases, los objetos heredan de otros objetos. Esto se llama herencia basada en prototipos. La herencia prototipal se basa en prototipos que actúan como un modelo o plantilla de otros objetos.
 
-// Características:
-// No utiliza clases, sino objetos que heredan de otros objetos.
-// Los objetos se pueden clonar o extender utilizando un mecanismo de delegación prototipal.
-// Un objeto puede heredar directamente de otro objeto a través de su prototipo.
-// Ejemplo de herencia prototipal en JavaScript:
+/* In JS , whatever object has a prototype from which inherits properties and methods.
+Instead of depending of classes. the objects inherit from other objects.
+This is called : Inheritance prototypal based
+*/
 
-// Objeto Prototipo
+/* Main features 
+  * It does not use classes but objects which inherit from other objects(protoype)
+  * The objects can be cloned or extended using a mechanism of prototypal delegation.
+  * An object can inherit directly form other object through its prototype.
+*/
+
+// Example of Prototypal inheritance in JS
+
+// Object prototype:
+
 const vehiclePrototype = {
     move: function() {
-      console.log(`${this.type} está en movimiento`);
+      console.log(`${this.type} is moving`);
     }
   };
-  
-  // Crear un nuevo objeto basado en el prototipo de vehicle
+
+  // Create a new object based on the vehicle prototype
+
   const car = Object.create(vehiclePrototype);
-  car.type = 'Coche';
+  car.type = 'Truck';
   car.brand = 'Toyota';
   
-  // Añadir un método específico a car
+  // Add a specific method to car
   car.displayBrand = function() {
-    console.log(`Este coche es un ${this.brand}`);
+    console.log(`The ${this.type}'s brand is: ${this.brand}`);
   };
   
-  // Llamar a los métodos
+  // Call the methods
   car.move();           // Coche está en movimiento (heredado del prototipo)
   car.displayBrand();   // Este coche es un Toyota (propio de car)
   
