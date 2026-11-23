@@ -4,7 +4,7 @@ They only displays one value at time.
 
 const myBoolean = true;
 
-const myUndefinded = undefined;
+const myUndefined = undefined;
 
 const myNull = null;
 

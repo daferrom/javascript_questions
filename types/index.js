@@ -14,13 +14,18 @@ var str = "Yenni Delgado"
 
 // Number
 
+// there is no distinction inb JS between int and floats like other programming languages
+
 var x = 4 // could be integers
 var y = 3.6 // could be with decimal
 
-// Biginteger : with and n at the end for long numbers
+// Biginteger : with and n at the end for long numbers.
+// BigInt values represent integer values which are too high or too low to be represented by the number primitive.
 
 var bigInteger = 234567890123456789012345678901234567890n
 console.log(typeof bigInteger) // bigInt
+
+const alsoHuge = BigInt("90000001910102735374752727256237623567")
 
 // Boolean
 
@@ -34,7 +39,8 @@ var c =  2;
 
 
 // Undefined
-// When a variable is declared but not assigned, it has the value of undefined and it’s type is also undefined.
+// When a variable is declared but not assigned
+// it has the value of undefined and it’s type is also undefined.
 // undefined value is assigned automatically by JS
 
 var z; // value is undefined
@@ -43,17 +49,16 @@ typeof z // returns undefined
 
 // Null
 // represents an not existing or invalid value
-// Null is never assigned as an utomatic way in JS
-
-
+// Null is never assigned as an automatic way in JS
 
 var d = null
 typeof z // returns "object"
 
-// Symbol 
-// It is a new data type introduced in the ES6 version of javascript. It is used to store an anonymous and unique value.
-// It represents an unique an unnmutable identifier
-// Ist value can not vebe altered once that was created
+// Symbol
+// It is a new data type introduced in the ES6 version of javascript.
+// It is used to store an anonymous and unique value.
+// It represents an unique an unmutable identifier
+// Ist value can not be altered once that was created
 
 let sym1 = Symbol();
 let sym2 = Symbol("foo");
@@ -83,3 +88,6 @@ var smartphone = {
 			return this.name.id
 	}
 }
+
+// Collection of ata as an ordered list
+var array1 = [5," hello", true, 4.1]
